@@ -39,7 +39,6 @@ const App = () => {
 		// Check if member already exist.
 		// /!\ Only check in the memberList array, should be more secure to tcheck in DB.
 		if (memberList.find((el) => el.name === name)) {
-			// TODO: handle notif errors.
 			handleStatus({
 				status: 'errorStatus',
 				message: 'This user is already in database',
