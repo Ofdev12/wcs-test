@@ -2,6 +2,7 @@ p {
 	margin-top: 2em;
 	text-align: center;
 	color: #fff;
-	background: #f76c6c;
+	/* background: #f76c6c; */
+	background: blue;
 	padding: 1em 0;
 }
