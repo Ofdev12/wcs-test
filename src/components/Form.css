@@ -1,0 +1,83 @@
+#form-container {
+	height: 20vh;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-direction: column;
+	margin-bottom: 5vh;
+}
+
+.new-member-form {
+	width: 50%;
+	position: relative;
+	height: 50px;
+	overflow: hidden;
+}
+
+.new-member-form input {
+	width: 100%;
+	height: 100%;
+	color: #595f6e;
+	padding-top: 20px;
+	border: none;
+	outline: none;
+}
+
+.new-member-form label {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	border-bottom: 1px solid black;
+}
+
+.new-member-form label::after {
+	content: '';
+	position: absolute;
+	left: 0px;
+	bottom: -1px;
+	height: 100%;
+	width: 100%;
+	border-bottom: 3px solid #5fa8d3;
+	transform: translateX(-100%);
+	transition: transform 0.3s ease;
+}
+
+.content-name {
+	position: absolute;
+	bottom: 5px;
+	left: 0px;
+	transition: all 0.3s ease;
+}
+
+.new-member-form input:focus + .label-name .content-name,
+.new-member-form input:valid + .label-name .content-name {
+	transform: translateY(-150%);
+	font-size: 14px;
+	color: #5fa8d3;
+}
+
+.new-member-form input:focus + .label-name::after,
+.new-member-form input:valid + .label-name::after {
+	transform: translateX(0%);
+}
+
+.alerte {
+	position: absolute;
+	top: 32px;
+	right: 32px;
+}
+
+.errorStatus {
+	padding: 16px;
+	border: 1px solid #ffccc7;
+	background-color: #fff2f0;
+}
+
+.succesStatus {
+	padding: 16px;
+	border: 1px solid #b7eb8f;
+	background-color: #f6ffed;
+}
