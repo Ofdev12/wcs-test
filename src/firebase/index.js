@@ -10,7 +10,9 @@ const members = {
 	add: (data) => fb.collection('members').add(data),
 	subToAll: (setState) =>
 		fb.collection('members').onSnapshot(async (snap) => {
-			const data = await snap.docs.map((doc) => doc.data())
+			const data = await snap.docs.map((doc) => {
+				return { docID: doc.id, ...doc.data() }
+			})
 			data.sort((a, b) => {
 				if (a.name < b.name) {
 					return -1
