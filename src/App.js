@@ -51,7 +51,7 @@ const App = () => {
 					e.target.reset()
 					handleStatus({
 						status: 'succesStatus',
-						message: 'Membre added !',
+						message: `${name} added !`,
 					})
 				})
 				.catch((err) => {
