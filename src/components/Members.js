@@ -1,6 +1,5 @@
 import './Members.css'
-export const Members = ({ memberList }) => {
-	console.log(memberList)
+export const Members = ({ memberList, removeMember }) => {
 	return (
 		<>
 			<h2>Membres de l'équipage</h2>
