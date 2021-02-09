@@ -11,6 +11,8 @@ h2 {
 }
 
 .member-item {
+	display: flex;
+	justify-content: space-between;
 	width: auto;
 	min-width: 28%;
 	margin-top: 18px;
@@ -31,6 +33,16 @@ h2 {
 #emptyList {
 	width: 100%;
 	text-align: center;
+}
+
+.btn-close {
+	background-color: #fff;
+	color: rgba(0, 0, 0, 0.5);
+	border: none;
+	outline: none;
+}
+.btn-close:hover {
+	color: rgba(0, 0, 0, 1);
 }
 
 @media only screen and (max-width: 600px) {
