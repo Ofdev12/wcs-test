@@ -24,6 +24,7 @@ const members = {
 			})
 			setState(data)
 		}),
+	delete: (docID) => fb.collection('members').doc(docID).delete(),
 }
 
 export const db = {
