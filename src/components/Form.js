@@ -1,7 +1,7 @@
 import { useForm } from 'react-hook-form'
 import './Form.css'
 export const Form = ({ saveMember, status }) => {
-	const { register, handleSubmit, formState } = useForm()
+	const { register, handleSubmit } = useForm()
 
 	return (
 		<div id='form-container'>
