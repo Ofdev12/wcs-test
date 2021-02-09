@@ -9,6 +9,7 @@ import { db } from './firebase/index'
 const App = () => {
 	const [memberList, setMemberList] = useState()
 	const [status, setStatus] = useState({})
+	const [timeAlerte, setTimeAlerte] = useState()
 
 	useEffect(() => {
 		// Subscribe to the members collections.
@@ -16,10 +17,13 @@ const App = () => {
 	}, [])
 
 	const handleStatus = (data) => {
+		if (timeAlerte) clearTimeout(timeAlerte)
 		setStatus(data)
-		setTimeout(() => {
+		const timerID = setTimeout(() => {
 			setStatus({})
+			setTimeAlerte(false)
 		}, 3000)
+		setTimeAlerte(timerID)
 	}
 
 	// The saveMember method in the parent, to avoid passing the memberList to the child.
