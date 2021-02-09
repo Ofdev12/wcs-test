@@ -8,6 +8,9 @@ export const Members = ({ memberList, removeMember }) => {
 					memberList.map((el, i) => (
 						<div className='member-item' key={`${i}-${el.name}`}>
 							{el.name}
+							<button className='btn-close' onClick={() => removeMember(el)}>
+								X
+							</button>
 						</div>
 					))
 				) : (
