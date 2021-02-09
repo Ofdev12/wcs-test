@@ -66,12 +66,29 @@ const App = () => {
 		return
 	}
 
+	const removeMember = (item) => {
+		db.members
+			.delete(item.docID)
+			.then(() => {
+				handleStatus({
+					status: 'succesStatus',
+					message: ` ${item.name} was removed`,
+				})
+			})
+			.catch((err) => {
+				handleStatus({
+					status: 'errorStatus',
+					message: `Error during removed: ${item.name}`,
+				})
+			})
+	}
+
 	return (
 		<div className='App'>
 			<Header />
 			<main>
 				<Form saveMember={saveMember} status={status} />
-				<Members memberList={memberList} />
+				<Members memberList={memberList} removeMember={removeMember} />
 			</main>
 			<Footer />
 		</div>
