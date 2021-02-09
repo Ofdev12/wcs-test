@@ -2,7 +2,6 @@ import { useForm } from 'react-hook-form'
 import './Form.css'
 export const Form = ({ saveMember, status }) => {
 	const { register, handleSubmit, formState } = useForm()
-	const { isSubmitting } = formState
 
 	return (
 		<div id='form-container'>
