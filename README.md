@@ -2,4 +2,4 @@
 
 ### `npm start`
 
-Run the app.
+Runs the app.
